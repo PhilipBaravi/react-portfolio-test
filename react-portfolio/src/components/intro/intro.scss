@@ -1,0 +1,113 @@
+@import '../../global.scss';
+
+.intro{
+    
+    display: flex;
+    background-image: url('https://images.unsplash.com/photo-1557683304-673a23048d34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=486&q=80');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex: 0.5;
+        background-color: inherit;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        .imgContainer{
+            width: 90%;
+            height: 660px;
+            border-radius: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+
+            @include mobile{
+                align-items: flex-start;
+            }
+
+            img{
+                height: 80%;
+
+                @include mobile{
+                    height: 47%;
+                }
+            }
+        }
+    }
+    .right{
+        flex: 0.5;
+        background-color: inherit;
+        color: #fff;
+        position: relative;
+
+        .wrapper{
+            width: 95%;
+            height: 100%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include mobile{
+                padding-left: 0px;
+                min-width: 300px;
+                text-align: center;
+            }
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+
+                @include mobile{
+                    font-size: 20px;
+                }
+            }
+            h2{
+                font-size: 35px;
+
+                @include mobile{
+                    font-size: 30px;
+                }
+            }
+            h3{
+                font-size: 30px; 
+
+                @include mobile{
+                    font-size: 18px;
+                }
+
+                span{
+                    font-size: inherit;
+                    color: inherit;
+                }
+            }
+        }
+        a{
+            position: absolute;
+            bottom: 10px;
+            left: 90%;
+
+            @include mobile{
+               display: none;
+            }
+
+            img{
+                width: 60px;
+                animation: arrowBlink 5s infinite;
+
+            }
+            @keyframes arrowBlink {
+                to{
+                   opacity: 0; 
+                }
+            }
+        }
+    }
+}
